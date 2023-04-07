@@ -37,7 +37,7 @@ function get_app() {
 		useradd -m $_9HITSUSER
 	fi
 
-	wget -O "/tmp/get-app.sh" https://github.com/chuanbiancom000/install/blob/main/3.0.4/get-app.sh && chmod +x "/tmp/get-app.sh"
+	wget -O "/tmp/get-app.sh" https://raw.githubusercontent.com/chuanbiancom000/install/main/3.0.4/get-app.sh && chmod +x "/tmp/get-app.sh"
 	runuser -l $_9HITSUSER -c "/bin/bash /tmp/get-app.sh $(printf "%q" "$ARGS")"
 	rm -f "/tmp/get-app.sh"
 }
